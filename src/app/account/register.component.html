@@ -1,0 +1,76 @@
+<div class="container col-md-6 offset-md-3 mt-5 mb-4">
+  @if (error) {
+    <div class="alert alert-danger">{{error}}</div>
+  }
+  <div class="card rounded-5 p-4">
+    <div class="mx-4">
+      <h3 class="mt-5 mb-3 text-dark">Create Your Account</h3>
+      
+    </div>
+    <div class="card-body mx-4">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="text-center">
+        <div class="mb-3">
+          <input type="text" formControlName="firstName" class="form-control py-3 bg-body-secondary border-0 bg-light" placeholder="First name" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+          @if (submitted && f.firstName.errors) {
+            <div class="invalid-feedback">
+              @if (f.firstName.errors.required) {
+                <div>First Name is required</div>
+              }
+            </div>
+          }
+        </div>
+        <div class="mb-3">
+          <input type="text" formControlName="lastName" class="form-control py-3 bg-body-secondary border-0 bg-light" placeholder="Last name" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+          @if (submitted && f.lastName.errors) {
+            <div class="invalid-feedback">
+              @if (f.lastName.errors.required) {
+                <div>Last Name is required</div>
+              }
+            </div>
+          }
+        </div>
+
+
+        <div class="mb-3">
+          <input type="text" formControlName="username" class="form-control py-3 bg-body-secondary border-0 bg-light" placeholder="User name" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+          @if (submitted && f.username.errors) {
+            <div class="invalid-feedback">
+              @if (f.username.errors.required) {
+                <div>User Name is required</div>
+              }
+            </div>
+          }
+        </div>
+
+
+        <div class="mb-3">
+          <input type="password" formControlName="password" class="form-control py-3 bg-body-secondary border-0 bg-light" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+          @if (submitted && f.password.errors) {
+            <div class="invalid-feedback">
+              @if (f.password.errors.required) {
+                <div>Password is required</div>
+              }
+              @if (f.password.errors.minlength) {
+                <div>Password must be at least 6 characters</div>
+              }
+            </div>
+          }
+        </div>
+        <div>
+          <button [disabled]="loading" class="btn btn-lg btn-info form-control mt-4 text-light">
+            @if (loading) {
+              <span class="spinner-border spinner-border-sm me-1"></span>
+            }
+            Register
+          </button>
+          <a routerLink="../login" class="btn btn-link mt-3 mb-4 text-secondary">Cancel</a>
+        </div>
+        <div class="terms text-secondary text-start">
+          <p>By creating an account, you agree to our Terms of Use, and acknowledge that you have read our Privacy Policy, Cookies Policy and UK & EU Privacy Rights.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

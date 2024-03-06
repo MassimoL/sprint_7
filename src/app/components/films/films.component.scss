@@ -1,0 +1,21 @@
+.background-films {
+
+  font-family: 'Share Tech Mono', monospace;
+
+  .texto-grande {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .card-text {
+    min-height: 50px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .card{
+    width: 20rem !important;
+  }
+}

@@ -1,0 +1,11 @@
+<div class="container" (window:scroll)="onScroll()">
+  @for( starship of starships;track starship.id ){
+  <div class="row" (click)="onStarshipClick(starship)">
+    <div class="col-9 mx-auto bg-dark mt-3 p-3 rounded">
+      <h4 class="card-title fw-bold text-light">{{starship.name | uppercase}}</h4>
+      <p class="card-text text-secondary">{{starship.model}}</p>
+    </div>
+  </div>
+  }
+</div>
+

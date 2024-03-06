@@ -1,0 +1,23 @@
+<header class="container-fluid">
+  <div class="row mt-3 mb-3">
+    <div class="col-12 col-md-4 text-center rrss">
+      <img src="/assets/img/redes.png" alt="redes sociales">
+    </div>
+    <div class="col-12 col-md-4 text-center">
+      <img class="logo" src="/assets/img/logo-oficial-StarWars.png" alt="star wars logo">
+    </div>
+
+    @if (user) {
+    <div class="col-12 col-md-4 d-flex justify-content-end box-1">
+      <div class="row mt-3 box-2">
+      </div>
+    </div>
+    }
+  </div>
+</header>
+
+<app-navbar [user]="user"></app-navbar>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

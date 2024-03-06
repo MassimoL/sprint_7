@@ -1,0 +1,38 @@
+
+<div class="background-starships m-4">
+  <h4 class="col-10 mx-auto pb-2 mb-0 text-light ps-2 pt-2 border border-light border-start-0 border-end-0">STARSHIP</h4>
+
+  <section class="ship-card col-10 mb-3 mt-4 border border-0 mx-auto rounded-3">
+    <div class="row g-0">
+      <div class="col-md-6 col-lg-5 p-0 border-end border-danger border-3 back-image">
+        <img class="img-fluid w-100 h-100" [src]="starshipDetails.imageURL" [alt]="starshipDetails.name" (error)="starshipDetails.imageURL='assets/img/darthVaderError.jpeg'" >
+      </div>
+
+
+      <div class="col-md-6 col-lg-7 text-area p-3 rounded-end">
+        <div class="card-bodyf">
+            <h5 class="card-title text-light">{{ starshipDetails?.details?.name | uppercase }}</h5>
+
+            <div class="row">
+                <div class="col-md-12 text-secondary">
+                    <p class="card-text"><span class="texto-grande"> Model: </span>{{ starshipDetails?.details?.model }}</p>
+                    <p class="card-text"><span class="texto-grande">Cost in credits: </span>{{ starshipDetails?.details?.cost_in_credits }}</p>
+                    <p class="card-text"><span class="texto-grande">Atmospheric Speed: </span>{{ starshipDetails?.details?.max_atmosphering_speed }}</p>
+                    <p class="card-text"><span class="texto-grande">Manufacturer: </span>{{ starshipDetails?.details?.manufacturer }}</p>
+                    <p class="card-text"><span class="texto-grande">Length: </span>{{ starshipDetails?.details?.length }}</p>
+                    <p class="card-text"><span class="texto-grande">Crew: </span>{{ starshipDetails?.details?.crew }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  </section>
+</div>
+
+<app-pilots/>
+<app-films/>
+
+ <!-- BOTON OPCIONAL -->
+                    <!-- <div class="d-flex justify-content-end">
+                        <button class="btn btn-light text-dark align-self-end" (click)="goBackToList()">Back to List</button>
+                    </div> -->
