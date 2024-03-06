@@ -1,6 +1,6 @@
 # Star Wars Universe Explorer 
 
-"This web application, generated with [Angular CLI](https://github.com/angular/angular-cli), project is crafted to delve into the expansive Star Wars universe. Users can seamlessly search and access comprehensive details on starships, pilots, and films from the Star Wars saga."
+"This web application, generated with [Angular CLI](https://github.com/angular/angular-cli), is crafted to delve into the expansive Star Wars universe. Users can seamlessly search and access comprehensive details on starships, pilots, and films from the Star Wars saga."
 
 ## Features
 
