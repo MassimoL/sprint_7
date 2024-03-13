@@ -15,10 +15,10 @@ import {
   ɵɵdefineNgModule,
   ɵɵdirectiveInject
 } from "./chunk-N35DH5HG.js";
+import "./chunk-KUOPV5YS.js";
 import {
   fromEvent
 } from "./chunk-2UXUBMH3.js";
-import "./chunk-KUOPV5YS.js";
 import {
   __spreadProps,
   __spreadValues,
